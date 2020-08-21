@@ -1,7 +1,7 @@
 version: '2.2'
 services:
   es01:
-    image: docker.elastic.co/elasticsearch/elasticsearch:7.8.0
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.9.0
     container_name: es01
     restart: always
     environment:
@@ -23,7 +23,7 @@ services:
       - elastic
 
   es02:
-    image: docker.elastic.co/elasticsearch/elasticsearch:7.8.0
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.9.0
     container_name: es02
     restart: always
     environment:
@@ -45,7 +45,7 @@ services:
       - elastic
 
   es03:
-    image: docker.elastic.co/elasticsearch/elasticsearch:7.8.0
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.9.0
     container_name: es03
     restart: always
     environment:
@@ -67,7 +67,7 @@ services:
       - elastic
       
   ls01:
-    image: docker.elastic.co/logstash/logstash:7.8.0
+    image: docker.elastic.co/logstash/logstash:7.9.0
     container_name: ls01
     restart: always
     environment:
@@ -84,7 +84,7 @@ services:
       - elastic      
 
   kib01:
-    image: docker.elastic.co/kibana/kibana:7.8.0
+    image: docker.elastic.co/kibana/kibana:7.9.0
     container_name: kib01
     restart: always
     ports:
@@ -98,7 +98,7 @@ services:
       - elastic
 
   apm-server:
-    image: docker.elastic.co/apm/apm-server:7.8.0
+    image: docker.elastic.co/apm/apm-server:7.9.0
     container_name: apm-server
     depends_on:
       - es01
